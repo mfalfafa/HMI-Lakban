@@ -20,27 +20,6 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pb_rework">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>70</y>
-      <width>201</width>
-      <height>381</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 75 16pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(255, 255, 255);
-background-color: rgb(255, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>REWORK</string>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
@@ -51,7 +30,7 @@ background-color: rgb(255, 0, 0);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+     <string notr="true">font: 75 18pt &quot;Arial&quot;;
 color: rgb(0, 0, 255);
 background-color: rgb(255, 255, 255);
 border-color: rgb(0, 0, 255);</string>
@@ -66,7 +45,7 @@ border-color: rgb(0, 0, 255);</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QGroupBox" name="horizontalGroupBox">
+   <widget class="QWidget" name="horizontalWidget" native="true">
     <property name="geometry">
      <rect>
       <x>29</x>
@@ -99,9 +78,15 @@ border-color: rgb(0, 0, 255);</string>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+font: 75 18pt &quot;Arial&quot;;
 background-color: rgb(0, 0, 131);</string>
        </property>
        <property name="text">
@@ -120,9 +105,15 @@ background-color: rgb(0, 0, 131);</string>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 255, 255);
-font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+font: 75 18pt &quot;Arial&quot;;
 background-color: rgb(0, 0, 131);</string>
        </property>
        <property name="text">
@@ -169,7 +160,7 @@ background-color: rgb(0, 0, 131);</string>
         <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 255);
 border-color: rgb(0, 0, 255);
-font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 75 17pt &quot;Arial&quot;;</string>
        </property>
        <property name="text">
         <string>Line 24</string>
@@ -189,14 +180,14 @@ font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 0, 0);
-font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+font: 75 17pt &quot;Arial&quot;;
 background-color: rgb(214, 214, 214);</string>
        </property>
        <property name="frameShape">
         <enum>QFrame::NoFrame</enum>
        </property>
        <property name="text">
-        <string>1500</string>
+        <string>0</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -205,7 +196,7 @@ background-color: rgb(214, 214, 214);</string>
         <bool>false</bool>
        </property>
        <property name="margin">
-        <number>0</number>
+        <number>10</number>
        </property>
       </widget>
      </item>
@@ -221,7 +212,7 @@ background-color: rgb(214, 214, 214);</string>
         <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 255);
 border-color: rgb(0, 0, 255);
-font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 75 17pt &quot;Arial&quot;;</string>
        </property>
        <property name="text">
         <string>Line 23</string>
@@ -243,7 +234,7 @@ font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
         <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 255);
 border-color: rgb(0, 0, 255);
-font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 75 17pt &quot;Arial&quot;;</string>
        </property>
        <property name="text">
         <string>Line 25</string>
@@ -265,7 +256,7 @@ font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
         <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 255);
 border-color: rgb(0, 0, 255);
-font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 75 17pt &quot;Arial&quot;;</string>
        </property>
        <property name="text">
         <string>Line 26</string>
@@ -285,17 +276,17 @@ font: 75 14pt &quot;MS Shell Dlg 2&quot;;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 0, 0);
-font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+font: 75 17pt &quot;Arial&quot;;
 background-color: rgb(214, 214, 214);</string>
        </property>
        <property name="text">
-        <string>1500</string>
+        <string>0</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
        <property name="margin">
-        <number>0</number>
+        <number>10</number>
        </property>
       </widget>
      </item>
@@ -309,11 +300,11 @@ background-color: rgb(214, 214, 214);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 0, 0);
-font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+font: 75 17pt &quot;Arial&quot;;
 background-color: rgb(214, 214, 214);</string>
        </property>
        <property name="text">
-        <string>1500</string>
+        <string>0</string>
        </property>
        <property name="textFormat">
         <enum>Qt::AutoText</enum>
@@ -328,7 +319,7 @@ background-color: rgb(214, 214, 214);</string>
         <bool>false</bool>
        </property>
        <property name="margin">
-        <number>0</number>
+        <number>10</number>
        </property>
        <property name="indent">
         <number>-1</number>
@@ -345,17 +336,17 @@ background-color: rgb(214, 214, 214);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 0, 0);
-font: 75 16pt &quot;MS Shell Dlg 2&quot;;
+font: 75 17pt &quot;Arial&quot;;
 background-color: rgb(214, 214, 214);</string>
        </property>
        <property name="text">
-        <string>1500</string>
+        <string>0</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
        <property name="margin">
-        <number>0</number>
+        <number>10</number>
        </property>
       </widget>
      </item>
@@ -366,7 +357,7 @@ background-color: rgb(214, 214, 214);</string>
      <rect>
       <x>30</x>
       <y>20</y>
-      <width>160</width>
+      <width>221</width>
       <height>41</height>
      </rect>
     </property>
@@ -388,12 +379,21 @@ background-color: rgb(214, 214, 214);</string>
      </property>
      <item>
       <widget class="QLabel" name="time_lbl">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>22</pointsize>
+         <weight>9</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 0, 0);
-font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 75 22pt &quot;Arial&quot;;</string>
        </property>
        <property name="text">
-        <string>09:45</string>
+        <string>09:45:55</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -402,6 +402,15 @@ font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
      </item>
      <item>
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>MS Shell Dlg 2</family>
+         <pointsize>20</pointsize>
+         <weight>9</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 0, 0);
 font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
@@ -416,9 +425,18 @@ font: 75 20pt &quot;MS Shell Dlg 2&quot;;</string>
      </item>
      <item>
       <widget class="QLabel" name="shift_lbl">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>22</pointsize>
+         <weight>9</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">color: rgb(255, 0, 0);
-font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 75 22pt &quot;Arial&quot;;</string>
        </property>
        <property name="text">
         <string>Shift 1</string>
@@ -429,6 +447,24 @@ font: 75 16pt &quot;MS Shell Dlg 2&quot;;</string>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QPushButton" name="pb_rework">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>80</y>
+      <width>201</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 0, 0);
+font: 75 24pt &quot;Arial&quot;;</string>
+    </property>
+    <property name="text">
+     <string>REWORK</string>
+    </property>
    </widget>
   </widget>
  </widget>

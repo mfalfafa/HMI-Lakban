@@ -19,15 +19,15 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>230</x>
+     <x>220</x>
      <y>10</y>
-     <width>171</width>
+     <width>191</width>
      <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 170, 0);
-font: 87 24pt &quot;Arial Black&quot;;</string>
+font: 75 28pt &quot;Arial&quot;;</string>
    </property>
    <property name="text">
     <string>REWORK</string>
@@ -44,7 +44,7 @@ font: 87 24pt &quot;Arial Black&quot;;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);
-font: 75 22pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 75 20pt &quot;Arial&quot;;</string>
    </property>
    <property name="text">
     <string>Line :</string>
@@ -61,7 +61,7 @@ font: 75 22pt &quot;MS Shell Dlg 2&quot;;</string>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);
-font: 75 22pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 75 20pt &quot;Arial&quot;;</string>
    </property>
    <property name="text">
     <string>Jumlah Rework :</string>
@@ -98,7 +98,7 @@ font: 75 22pt &quot;MS Shell Dlg 2&quot;;</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 75 26pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">font: 75 28pt &quot;Arial&quot;;
 background-color: rgb(255, 170, 0);
 color: rgb(255, 255, 255);</string>
    </property>
@@ -106,100 +106,88 @@ color: rgb(255, 255, 255);</string>
     <string>SUBMIT</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_5">
+  <widget class="QPushButton" name="exit_pb">
    <property name="geometry">
     <rect>
      <x>540</x>
-     <y>-10</y>
-     <width>41</width>
-     <height>71</height>
+     <y>10</y>
+     <width>50</width>
+     <height>41</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
    <property name="styleSheet">
-    <string notr="true">color: rgb(255, 0, 0);
-font: 75 48pt &quot;MS Shell Dlg 2&quot;;</string>
+    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(243, 0, 0);
+font: 75 28pt &quot;Arial&quot;;</string>
    </property>
    <property name="text">
     <string>x</string>
    </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
   </widget>
-  <widget class="QLabel" name="next_btn">
+  <widget class="QWidget" name="horizontalWidget" native="true">
    <property name="geometry">
     <rect>
-     <x>476</x>
-     <y>180</y>
-     <width>94</width>
-     <height>49</height>
+     <x>300</x>
+     <y>160</y>
+     <width>244</width>
+     <height>80</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 75 22pt &quot;MS Shell Dlg 2&quot;;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>pyqt5/right_chevron.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>false</bool>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="prev_btn">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>180</y>
-     <width>94</width>
-     <height>49</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 75 22pt &quot;MS Shell Dlg 2&quot;;</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap>pyqt5/left_chevron.png</pixmap>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-  </widget>
-  <widget class="QLabel" name="rework_val">
-   <property name="geometry">
-    <rect>
-     <x>390</x>
-     <y>180</y>
-     <width>80</width>
-     <height>49</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 75 28pt &quot;MS Shell Dlg 2&quot;;</string>
-   </property>
-   <property name="text">
-    <string>1000</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>10</number>
+    </property>
+    <item>
+     <widget class="QPushButton" name="pb_prev">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 170, 0);
+font: 75 24pt &quot;Arial&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&lt;&lt;</string>
+      </property>
+     </widget>
+    </item>
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QLabel" name="rework_val">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 75 24pt &quot;Arial&quot;;</string>
+      </property>
+      <property name="text">
+       <string>1000</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pb_next">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(255, 170, 0);
+font: 75 24pt &quot;Arial&quot;;</string>
+      </property>
+      <property name="text">
+       <string>&gt;&gt;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
