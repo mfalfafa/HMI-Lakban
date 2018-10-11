@@ -127,36 +127,40 @@ class MainWindow(QMainWindow, mainwindow.Ui_MainWindow):
         reworkwin.show()
 
     def pb_line23_pressed(self):
-        global val_line23,val_line24,val_line25,val_line26,val_line_active
+        global val_line23,val_line24,val_line25,val_line26,val_line_active,line_val
         val_line23.setStyleSheet(style_on)
         val_line24.setStyleSheet(style_off)
         val_line25.setStyleSheet(style_off)
         val_line26.setStyleSheet(style_off)
         val_line_active=1
+        line_val.setText("Line 23")
     
     def pb_line24_pressed(self):
-        global val_line23,val_line24,val_line25,val_line26,val_line_active
+        global val_line23,val_line24,val_line25,val_line26,val_line_active,line_val
         val_line23.setStyleSheet(style_off)
         val_line24.setStyleSheet(style_on)
         val_line25.setStyleSheet(style_off)
         val_line26.setStyleSheet(style_off)
         val_line_active=2
+        line_val.setText("Line 24")
 
     def pb_line25_pressed(self):
-        global val_line23,val_line24,val_line25,val_line26,val_line_active
+        global val_line23,val_line24,val_line25,val_line26,val_line_active,line_val
         val_line23.setStyleSheet(style_off)
         val_line24.setStyleSheet(style_off)
         val_line25.setStyleSheet(style_on)
         val_line26.setStyleSheet(style_off)
         val_line_active=3
+        line_val.setText("Line 25")
 
     def pb_line26_pressed(self):
-        global val_line23,val_line24,val_line25,val_line26,val_line_active
+        global val_line23,val_line24,val_line25,val_line26,val_line_active,line_val
         val_line23.setStyleSheet(style_off)
         val_line24.setStyleSheet(style_off)
         val_line25.setStyleSheet(style_off)
         val_line26.setStyleSheet(style_on)
         val_line_active=4
+        line_val.setText("Line 26")
 
     def __init__(self):
         global time_lbl
