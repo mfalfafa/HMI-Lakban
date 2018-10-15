@@ -1,3 +1,4 @@
+# Note : 
 # always seem to need this
 import sys
  
@@ -171,6 +172,12 @@ class Popup(QMainWindow, popup.Ui_Form):
         global popup_text,popupSignalStop
         super(self.__class__, self).__init__()
         self.setupUi(self) # gets defined in the UI file
+        # Move to the center of window
+        qtRectangle = self.frameGeometry()
+        centerPoint = QDesktopWidget().availableGeometry().center()
+        qtRectangle.moveCenter(centerPoint)
+        self.move(qtRectangle.topLeft())
+        
         popup_text=self.popup_text
 
         # Create Qt signal to emit minor stop signal
