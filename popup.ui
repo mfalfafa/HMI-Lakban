@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>229</width>
+    <width>230</width>
     <height>50</height>
    </rect>
   </property>
@@ -21,7 +21,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>200</width>
+     <width>230</width>
      <height>50</height>
     </rect>
    </property>
@@ -44,22 +44,20 @@ font: 75 10pt &quot;Arial&quot;;</string>
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QLabel" name="lbl_close">
    <property name="geometry">
     <rect>
-     <x>199</x>
-     <y>0</y>
-     <width>30</width>
-     <height>30</height>
+     <x>203</x>
+     <y>3</y>
+     <width>24</width>
+     <height>24</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">font: 16pt &quot;Arial&quot;;
-background-color: rgb(255, 0, 0);
-color: rgb(255, 255, 255);</string>
-   </property>
    <property name="text">
-    <string>x</string>
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>pyqt5/close_button.png</pixmap>
    </property>
   </widget>
  </widget>

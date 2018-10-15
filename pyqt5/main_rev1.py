@@ -57,9 +57,9 @@ def popupRun():
     global popupSignalStop,startPopup
     while 1:
         if startPopup==1:
-            startPopup=0
             time.sleep(3)
-            popupSignalStop.emit()
+            if startPopup == 1:
+                popupSignalStop.emit()                
 
 class ValueThread(threading.Thread):
     def __init__(self):
@@ -166,7 +166,14 @@ class Popup(QMainWindow, popup.Ui_Form):
     popupSignalStop = pyqtSignal(name='popupSignalStop')
 
     def sendPopupSignalStop(self):
+        global startPopup
         self.close()
+        startPopup=0
+
+    def closePressed(self, event):
+        global startPopup
+        self.close()
+        startPopup=0
 
     def __init__(self):
         global popup_text,popupSignalStop
@@ -177,8 +184,9 @@ class Popup(QMainWindow, popup.Ui_Form):
         centerPoint = QDesktopWidget().availableGeometry().center()
         qtRectangle.moveCenter(centerPoint)
         self.move(qtRectangle.topLeft())
-        
+
         popup_text=self.popup_text
+        self.lbl_close.mousePressEvent=self.closePressed
 
         # Create Qt signal to emit minor stop signal
         popupSignalStop=self.popupSignalStop
