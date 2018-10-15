@@ -18,10 +18,12 @@ import threading
 # This is our window from QtCreator
 import mainwindow_rev1
 import rework
+import popup
 
 # Windows
 mainwin=''
 reworkwin=''
+popupwin=''
 
 # variables
 style_on=("font: 75 30pt \"Arial\";\n"+"color: rgb(0, 0, 255);\n"+"background-color: rgb(180, 255, 255);\n"+"border-color: rgb(0, 0, 255);")
@@ -30,15 +32,33 @@ val_line_active=1
 val_of_line=0
 ready_setup=0
 current_time=0
+popupSignalStop=''
+startPopup=0
 
 # components
 line_val=''
 rework_val=''
 val_line23=''
 time_lbl=''
+popup_text=''
 
 # Python threads
 valueThread=''
+popupThread=''
+
+class PopupThread(threading.Thread):
+    def __init__(self):
+        threading.Thread.__init__(self)
+    def run(self):
+        popupRun()
+
+def popupRun():
+    global popupSignalStop,startPopup
+    while 1:
+        if startPopup==1:
+            startPopup=0
+            time.sleep(3)
+            popupSignalStop.emit()
 
 class ValueThread(threading.Thread):
     def __init__(self):
@@ -86,7 +106,7 @@ class Rework(QMainWindow, rework.Ui_Form):
             rework_val.setText(str(val))
 
     def submit_rework(self):
-        global rework_val,val_line23,val_of_line
+        global rework_val,val_line23,val_of_line,popupwin,startPopup
         val=rework_val.text()
         print(val)
         current_val=int(val_line23.text())
@@ -95,6 +115,8 @@ class Rework(QMainWindow, rework.Ui_Form):
         print(current_val)
         val_of_line=current_val
         self.close()
+        popupwin.show()
+        startPopup=1
 
     def __init__(self):
         global line_val,rework_val
@@ -137,14 +159,33 @@ class MainWindow(QMainWindow, mainwindow_rev1.Ui_MainWindow):
         time_lbl=self.time_lbl
         # Ready
         ready_setup=1
+
+# create class for our Raspberry Pi GUI
+class Popup(QMainWindow, popup.Ui_Form):
+    popupSignalStop = pyqtSignal(name='popupSignalStop')
+
+    def sendPopupSignalStop(self):
+        self.close()
+
+    def __init__(self):
+        global popup_text,popupSignalStop
+        super(self.__class__, self).__init__()
+        self.setupUi(self) # gets defined in the UI file
+        popup_text=self.popup_text
+
+        # Create Qt signal to emit minor stop signal
+        popupSignalStop=self.popupSignalStop
+        popupSignalStop.connect(self.sendPopupSignalStop)
+
         
 # I feel better having one of these
 def main():
-    global mainwin,reworkwin
+    global mainwin,reworkwin,popupwin
     # a new app instance
     app = QApplication(sys.argv)
     mainwin = MainWindow()
     reworkwin = Rework()
+    popupwin = Popup()
     mainwin.show()
     # reworkwin.show()
     # without this, the script exits immediately.
@@ -153,11 +194,13 @@ def main():
 # Create new thread for sending data every second
 try:
     valueThread=ValueThread()
+    popupThread=PopupThread()
 except Exception as e:
     print ("Error: unable to start thread!")
     print (str(e))
 # Start thread
 valueThread.start()
+popupThread.start()
 
 # python bit to figure how who started This
 if __name__ == "__main__":

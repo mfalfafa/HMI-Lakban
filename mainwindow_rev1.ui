@@ -270,7 +270,7 @@ font: 75 24pt &quot;Arial&quot;;</string>
      <string>REWORK</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="lbl_line">
     <property name="geometry">
      <rect>
       <x>30</x>
