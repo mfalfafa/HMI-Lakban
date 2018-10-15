@@ -86,8 +86,14 @@ class Rework(QMainWindow, rework.Ui_Form):
             rework_val.setText(str(val))
 
     def submit_rework(self):
-        global rework_val
+        global rework_val,val_line23,val_of_line
         val=rework_val.text()
+        print(val)
+        current_val=int(val_line23.text())
+        # Substract current value by rework value
+        current_val=current_val-int(val)
+        print(current_val)
+        val_of_line=current_val
         self.close()
 
     def __init__(self):
