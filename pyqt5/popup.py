@@ -26,8 +26,8 @@ class Ui_Form(object):
         self.lbl_close = QtWidgets.QLabel(Form)
         self.lbl_close.setGeometry(QtCore.QRect(203, 3, 24, 24))
         self.lbl_close.setText("")
-        self.lbl_close.setPixmap(QtGui.QPixmap("close_button.png"))
-        # self.lbl_close.setPixmap(QtGui.QPixmap("/home/pi/HMI-Lakban-Qt5/pyqt5/close_button.png"))
+        # self.lbl_close.setPixmap(QtGui.QPixmap("close_button.png"))
+        self.lbl_close.setPixmap(QtGui.QPixmap("/home/pi/HMI-Lakban-Qt5/pyqt5/close_button.png"))
         self.lbl_close.setObjectName("lbl_close")
 
         self.retranslateUi(Form)
